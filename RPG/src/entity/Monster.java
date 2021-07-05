@@ -8,4 +8,12 @@ public class Monster extends Unit {
 		super(name, MAX_HP, hp, damage);
 	}
 
+	public int getDrop() {
+		return drop;
+	}
+
+	public void setDrop(int drop) {
+		this.drop = drop;
+	}
+	
 }
