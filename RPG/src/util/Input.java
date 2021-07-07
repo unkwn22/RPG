@@ -15,6 +15,7 @@ public class Input {
 	public int NumInput() {
 		while(true) {
 			try {
+				System.out.print("Input: ");
 				int input = Integer.parseInt(scan.next());
 				return input;
 			}catch(Exception e) {
