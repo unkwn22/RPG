@@ -20,8 +20,12 @@ public class Human extends Unit {
 		this.gp = gp;
 	}
 
-	public int getGender() {
-		return gender;
+	public String getGender() {
+		if(gender == 1) {
+			return "male"; 
+		}else {
+			return "female";
+		}
 	}
 
 	public void setGender(int gender) {
