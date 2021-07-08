@@ -7,8 +7,7 @@ public class Start {
 	
 	static Input input = new Input();
 	
-	public Human CharacterSettings() {
-		
+	public Human characterSettings() {
 		boolean start = true;
 		boolean settings = false;
 		
@@ -29,7 +28,7 @@ public class Start {
 			System.out.println("1. Male | 2. Female");
 			System.out.println("Your gender");
 			int gender = input.NumInput();
-			Human player = new Human(name, 10, 10, 3, 20, gender);
+			Human player = new Human(name, 10, 10, 1, 2000, gender);
 			return player;
 		}
 		
