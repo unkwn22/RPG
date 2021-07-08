@@ -22,6 +22,7 @@ public class ShopInit {
 				Inventory.wList.add(Shop.weapons.get(choice-1));
 			}
 		}else if(type.equals("potion")) {
+			//Localizing variables due to long typing
 			current_gp = Town.player.getGp();
 			cost = Shop.potions.get(choice-1).getCost();
 			item_name = Shop.potions.get(choice-1).getName();
@@ -31,6 +32,7 @@ public class ShopInit {
 				current_gp -= cost;
 				Town.player.setGp(current_gp);
 				System.out.println("Bought one " + item_name);
+				Inventory.pList.add(Shop.potions.get(choice-1));
 			}
 		}
 	}
