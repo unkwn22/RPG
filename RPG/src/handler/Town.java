@@ -20,8 +20,14 @@ public class Town {
 	
 	public void town() {
 		while(true) {
-			System.out.println("Name: " + player.getName() + " | HP: " + player.getMAX_HP() + "/" 
-		+ player.getHp() + " | Coins: " + player.getGp() + " | Equipped: " + Inventory.current.get(0).getName() + " | Gender " + player.getGender());
+			System.out.print("Name: " + player.getName() + " | HP: " + player.getMAX_HP() + "/" 
+			+ player.getHp() + " | Coins: " + player.getGp() + " | Equipped: ");
+			if(Inventory.current.size() == 0) {
+				System.out.print("nothing");
+			}else {
+				System.out.print(Inventory.current.get(0).getName());
+			}
+			System.out.print(" | Gender: " + player.getGender() + "\n");
 			System.out.println("1. Battle | 2. Shop | 3. Inventory | 4. Save | 5. Quit");
 			int choice = Start.input.NumInput();
 			if(choice == 1) continue;
