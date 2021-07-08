@@ -7,7 +7,6 @@ import util.Input;
 
 public class PotionInven {
 	
-	static ArrayList<Potion> pList = new ArrayList<>();
 	Input input = new Input();
 
 	public void potionInven() {
