@@ -12,6 +12,7 @@ public class Town {
 	Shop s = null;
 	Inventory inven = new Inventory();
 	
+	//constructor only called once from app.Main class
 	public Town(Human player, ArrayList<Weapon> weapons, ArrayList<Potion> potions) {
 		Town.player = player;
 		s = new Shop(weapons, potions);
@@ -20,7 +21,7 @@ public class Town {
 	public void town() {
 		while(true) {
 			System.out.println("Name: " + player.getName() + " | HP: " + player.getMAX_HP() + "/" 
-		+ player.getHp() + " | Coins: " + player.getGp() + " | Gender: " + player.getGender());
+		+ player.getHp() + " | Coins: " + player.getGp() + " | Equipped: " + Inventory.current.get(0).getName() + " | Gender " + player.getGender());
 			System.out.println("1. Battle | 2. Shop | 3. Inventory | 4. Save | 5. Quit");
 			int choice = Start.input.NumInput();
 			if(choice == 1) continue;
@@ -29,6 +30,10 @@ public class Town {
 			}
 			else if(choice == 3) {
 				inven.playerInventory();
+			}else if(choice == 4) {
+				
+			}else if(choice == 5) {
+				break;
 			}
 		}
 	}
