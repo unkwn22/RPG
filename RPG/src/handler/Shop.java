@@ -11,6 +11,7 @@ public class Shop {
 	static ArrayList<Weapon> weapons = null;
 	static ArrayList<Potion> potions = null;
 	ShopInit init = new ShopInit();
+	InvenInit invenInit = new InvenInit();
 	
 	//only called once from town constructor
 	public Shop(ArrayList<Weapon> weapons, ArrayList<Potion> potions) {
@@ -82,8 +83,49 @@ public class Shop {
 	
 	public void sellShop() {
 		while(true) {
-			for(int i = 0; i < potions.size(); i++) {
-				
+			System.out.println("1. Weapon | 2. Potion | 0. Back");
+			int choice = Start.input.NumInput();
+			if(choice == 0){
+				break;
+			}else if(choice == 1) {
+				while(true){
+					invenInit.view("weapon");
+					System.out.println("Current Gold: " + Town.player.getGp());
+					System.out.println("What would you like to sell?");
+					choice = Start.input.NumInput();
+					if(choice == 0){
+						break;
+					}else if(Inventory.wList.size() == 0) {
+						System.out.println("There's nothing to sell");
+					}else{
+						int cost = Inventory.wList.get(choice-1).getCost();
+						double tax = cost * 0.2;
+						int sellPrice = cost - (int)tax;
+						Inventory.wList.remove(choice-1);
+						Town.player.setGp(Town.player.getGp() + sellPrice);
+						System.out.println("Sold");
+					}
+				}
+			}else if(choice == 2) {
+				while(true){
+					invenInit.view("potion");
+					choice = Start.input.NumInput();
+					System.out.println("Current Gold: " + Town.player.getGp());
+					System.out.println("What would you like to sell?");
+					choice = Start.input.NumInput();
+					if(choice == 0){
+						break;
+					}else if(Inventory.pList.size() == 0) {
+						System.out.println("There's nothing to sell");
+					}else{
+						int cost = Inventory.pList.get(choice-1).getCost();
+						double tax = cost * 0.2;
+						int sellPrice = cost - (int)tax;
+						Inventory.pList.remove(choice-1);
+						Town.player.setGp(Town.player.getGp() + sellPrice);
+						System.out.println("Sold");
+					}
+				}
 			}
 		}
 	}
