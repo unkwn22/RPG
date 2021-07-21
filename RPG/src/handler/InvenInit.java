@@ -30,6 +30,7 @@ public class InvenInit {
 				}else {
 					Inventory.current.add(Inventory.wList.get(choice-1));
 					Inventory.wList.remove(choice-1);
+					Town.player.setDamage(Inventory.current.get(0).getDamage());
 				}
 			}
 		}
