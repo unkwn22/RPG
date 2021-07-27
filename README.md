@@ -1,5 +1,5 @@
 # Console based JAVA RPG
-Mini RPG game runned by JVM
+Mini rpg game runned by JVM
 
 # Tech Stack
 - Java
