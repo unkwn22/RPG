@@ -11,6 +11,8 @@ import entity.Weapon;
 import handler.Start;
 import handler.Town;
 
+//test1
+
 public class Main {
 	Start s = new Start();
 	Human player = null;
