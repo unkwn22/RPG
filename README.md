@@ -10,6 +10,6 @@ Mini rpg game runned by JVM
 ![](images/Entity.PNG)
 
 # Flow diagram
-![](images/RPGflow.jpg)
+![](images/flowchart.PNG)
 
 
