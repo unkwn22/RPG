@@ -2,7 +2,9 @@
 Mini rpg game runned by JVM
 
 # Tech Stack
-- Java
+- Environment: JDK 1.8
+- IDE: IntelliJ
+- Language: Java
 
 # Entity structure table
 ![](images/Entity.PNG)
