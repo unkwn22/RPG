@@ -1,5 +1,5 @@
 # Console based JAVA RPG
-Mini rpg game runned by JVM
+Project summary: Mini rpg game runned by Java virtual machine. Ability to take battles, earn coins, buy and sell from shops. Inventory features.
 
 # Tech Stack
 - Environment: JDK 1.8
@@ -10,6 +10,14 @@ Mini rpg game runned by JVM
 ![](images/Entity.PNG)
 
 # Flow diagram
-![](images/RPGflow.jpg)
+![](images/flowchart.PNG)
 
+# Improvements
+- Adding experience points
+- I/O file load/save
+- Increase monster unit
+- Weapon change percentage stat
+- Story Mode
+- Boss monsters
+- adding GUI interfaces
 
