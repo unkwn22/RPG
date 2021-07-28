@@ -12,7 +12,7 @@ Project summary: Mini rpg game runned by Java virtual machine. Ability to take b
 # Flow diagram
 ![](images/flowchart.PNG)
 
-#Improvements
+# Improvements
 - Adding experience points
 - I/O file load/save
 - Increase monster unit
