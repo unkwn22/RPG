@@ -11,7 +11,7 @@ import entity.Weapon;
 import handler.Start;
 import handler.Town;
 
-//test1
+//test2
 
 public class Main {
 	Start s = new Start();
